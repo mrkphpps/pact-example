@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 1. Install Pre-requisites
 
-Things you may want to cover:
+(NB: this assumes you are setting up on a Mac)
 
-* Ruby version
+Install Node Package Manager (npm) -> https://www.npmjs.com/package/download
 
-* System dependencies
+Use npm to install Ruby, RubyGems, Karma and Jasmine
 
-* Configuration
+## 2. To execute the consumer tests and generate a pact file in the /tmp/ directory
 
-* Database creation
+In one terminal (in the root of the project folder)
 
-* Database initialization
+    `bundle exec pact-mock-service -p 1234 --pact-specification-version 2.0.0 -l log/pact.logs`
 
-* How to run the test suite
+    (confirm that this is working by browsing to http://localhost:1234/names/eesti - if all is setup correctly then the expected response from the endpoint will be displayed in the browser)
 
-* Services (job queues, cache servers, search engines, etc.)
+In another terminal (same root of project)
 
-* Deployment instructions
+    `karma start`
 
-* ...
+This should execute the test and generate the pact file containing the request/response pair in tmp/ folder
+
+To run the provider test
+    `node provider-client.js`
+
