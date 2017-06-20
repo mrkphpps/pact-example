@@ -12,16 +12,16 @@ Use npm to install Ruby, RubyGems, Karma and Jasmine
 
 In one terminal (in the root of the project folder)
 
-    `bundle exec pact-mock-service -p 1234 --pact-specification-version 2.0.0 -l log/pact.logs`
+    bundle exec pact-mock-service -p 1234 --pact-specification-version 2.0.0 -l log/pact.logs
 
     (confirm that this is working by browsing to http://localhost:1234/names/eesti - if all is setup correctly then the expected response from the endpoint will be displayed in the browser)
 
 In another terminal (same root of project)
 
-    `karma start`
+    karma start
 
 This should execute the test and generate the pact file containing the request/response pair in tmp/ folder
 
 To run the provider test
-    `node provider-client.js`
+    node provider-client.js
 
