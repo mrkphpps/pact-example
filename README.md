@@ -23,5 +23,6 @@ In another terminal (same root of project)
 This should execute the test and generate the pact file containing the request/response pair in tmp/ folder
 
 To run the provider test
+
     node provider-client.js
 
