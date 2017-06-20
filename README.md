@@ -14,7 +14,8 @@ In one terminal (in the root of the project folder)
 
     bundle exec pact-mock-service -p 1234 --pact-specification-version 2.0.0 -l log/pact.logs
 
-    (confirm that this is working by browsing to http://localhost:1234/names/eesti - if all is setup correctly then the expected response from the endpoint will be displayed in the browser)
+    
+(confirm that this is working by browsing to http://localhost:1234/names/eesti - if all is setup correctly then the expected response from the endpoint will be displayed in the browser)
 
 In another terminal (same root of project)
 
